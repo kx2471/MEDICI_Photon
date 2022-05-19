@@ -10,19 +10,24 @@ public class PlayerMove : MonoBehaviourPunCallbacks
     //내 객체에 연결되어 있는 객체를 제어하기 위한 변수
     Rigidbody rb;//내 물리객체
     PlayerInput pi;//내 이동관련 입력객체
-    SmoothFollow sf;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         pi = this.GetComponent<PlayerInput>();
-        Camera.main.GetComponent<SmoothFollow>().target = this.transform;
+        anim = this.GetComponentInChildren<Animator>();
+
+        if (photonView.IsMine == true)
+        {
+            Camera.main.GetComponent<SmoothFollow>().target = this.transform;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (photonView.IsMine == false)
         {
             return;

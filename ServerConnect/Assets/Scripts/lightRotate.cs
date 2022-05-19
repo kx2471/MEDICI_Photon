@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class lightRotate : MonoBehaviour
 {
+    public float speed = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class lightRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(3 * Time.deltaTime, 0 , 0));
+        transform.Rotate(new Vector3(2 * Time.deltaTime, 0 , 0));
     }
 }
