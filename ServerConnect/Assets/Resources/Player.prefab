@@ -228,7 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gun_Pivot: {fileID: 9034332301581765201}
-  Gun: {fileID: 250718491}
 --- !u!1001 &792193383205619226
 PrefabInstance:
   m_ObjectHideFlags: 0
